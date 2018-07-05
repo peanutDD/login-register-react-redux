@@ -7,7 +7,7 @@ export default (ComposedComponent) => {
   class Authenticate extends Component {
 
     componentWillMount() {
-      if (!this.props.isAuthenticated) {
+      if (!this.props.isAuthorization) {
         this.props.addFlashMessage({
           type: 'danger',
           text: 'You need to login to access this page first'
@@ -17,7 +17,7 @@ export default (ComposedComponent) => {
     }
 
     componentWillUpdate(nextProps, nextState) {
-      if (!nextProps.isAuthenticated) {
+      if (!nextProps.isAuthorization) {
         this.context.router.history.push('/')
       }
     }
@@ -29,7 +29,7 @@ export default (ComposedComponent) => {
   }
 
   Authenticate.propTypes = {
-    isAuthenticated: PropTypes.bool.isRequired,
+    isAuthorization: PropTypes.bool.isRequired,
     addFlashMessage: PropTypes.func.isRequired
   }
 
@@ -38,8 +38,9 @@ export default (ComposedComponent) => {
   }
 
   const mapStateToProps = (state, ownProps) => {
+    console.log(state.auth);
     return {
-      isAuthenticated: state.auth.isAuthenticated
+      isAuthorization: state.auth.isAuthorization
     }
   }
 

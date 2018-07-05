@@ -23,8 +23,8 @@ export default (req, res, next) => {
             res.status(404).json({ error: 'no such user' })
           } else {
             req.currentUser = user
+            next()
           }
-          next()
         })
       }
     })

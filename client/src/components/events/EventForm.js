@@ -43,7 +43,7 @@ class EventForm extends Component {
 					/>
 				</div>
         <div className="form-group">
-          <button disabled={ isLoading } className="btn btn-primary btn-lg">Login</button>
+          <button disabled={ isLoading } className="btn btn-primary btn-lg">Create</button>
 				</div>
       </form>
     );
