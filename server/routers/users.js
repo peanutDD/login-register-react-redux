@@ -8,6 +8,14 @@ import User from '../models/user';
 
 const router = express.Router();
 
+
+/**
+ *
+ * TODO @param {object} data
+ *
+ */
+
+
 const commonValidateInput = (data) => {
   let errors = {}
 
