@@ -98,7 +98,6 @@ router.get('/:identifier', (req, res) => {
     orWhere: { username: req.params.identifier }
   }).fetch().then(user => {
     res.json({ user })
-    console.log(user);
   })
 })
 

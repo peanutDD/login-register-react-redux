@@ -18,7 +18,7 @@ import User from '../models/user';
 
 export default (req, res, next) => {
   const authorizationHeader = req.headers['authorization']
-  console.log(authorizationHeader)
+  // console.log(authorizationHeader)
 
   let token
   if (authorizationHeader) {
