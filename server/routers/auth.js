@@ -3,10 +3,26 @@ import User from '../models/user'
 import bcrypt from 'bcrypt'
 import jwt from "jsonwebtoken";
 import config from '../config/jwtSecret';
-import signale from 'signale'
+import {Signale} from 'signale'
 
 let router = express.Router()
 
+
+
+const options = {
+  types: {
+    error: {
+      badge: '!!',
+      label: 'fatal error'
+    },
+    success: {
+      badge: '🎅',
+      label: 'huge success'
+    }
+  }
+};
+
+const signale = new Signale(options);
 router.post('/', (req, res) => {
   const { identifier, password } = req.body
 
