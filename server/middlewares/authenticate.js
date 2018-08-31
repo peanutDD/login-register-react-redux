@@ -4,10 +4,10 @@ import User from '../models/user';
 
 
 /**
- *
- * ANCHOR  @param  {object} req
- * ANCHOR  @param  {object} res
- * ANCHOR  @param  {func} next
+ *   ANCHOR
+ *   @param  {object} req
+ *   @param  {object} res
+ *   @param  {func} next
  *
  */
 
