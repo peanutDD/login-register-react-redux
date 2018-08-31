@@ -3,11 +3,15 @@ import User from '../models/user'
 import bcrypt from 'bcrypt'
 import jwt from "jsonwebtoken";
 import config from '../config/jwtSecret';
+import signale from 'signale'
 
 let router = express.Router()
 
 router.post('/', (req, res) => {
   const { identifier, password } = req.body
+
+  signale.success(identifier, password)
+
   User.query({
     where: { username: identifier },
     orWhere: {email: identifier}
