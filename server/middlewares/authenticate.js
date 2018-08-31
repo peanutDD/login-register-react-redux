@@ -7,7 +7,7 @@ import User from '../models/user';
  *   ANCHOR
  *   @param  {object} req
  *   @param  {object} res
- *   @param  {func} next
+ *   @param  {func}   next
  *
  */
 
