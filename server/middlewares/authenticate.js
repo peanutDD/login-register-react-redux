@@ -6,11 +6,8 @@ import User from '../models/user';
 /**
  *
  * ANCHOR  @param  {object} req
-<<<<<<< HEAD
  * ANCHOR  @param  {object} res
-=======
  * ANCHOR  @param  {objct} res
->>>>>>> b47ed752928deb6f68908433d8d2cc6d433423a6
  * ANCHOR  @param  {func} next
  *
  */
