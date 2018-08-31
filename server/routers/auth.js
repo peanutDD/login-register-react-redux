@@ -16,8 +16,12 @@ const options = {
       label: 'fatal error'
     },
     success: {
-      badge: '🎅',
+      badge: '❤❤',
       label: 'huge success'
+    },
+    fatal: {
+      badge: '💔',
+      label: 'huge fatal'
     }
   }
 };
@@ -27,6 +31,7 @@ router.post('/', (req, res) => {
   const { identifier, password } = req.body
 
   signale.success(identifier, password)
+  signale.fatal('致命错误！')
 
   User.query({
     where: { username: identifier },
@@ -40,10 +45,10 @@ router.post('/', (req, res) => {
         }, config.jwtSecret )
         res.json({token})
       } else {
-        res.status(401).json({ errors: { form: 'Invalid Credentials' } })
+        res.status(401).json({ errors: { form: 'Invalid Credentials one!' } })
       }
     } else {
-      res.status(401).json({ errors: { form: 'Invalid Credentials' } })
+      res.status(401).json({ errors: { form: 'Invalid Credentials two!' } })
     }
   })
 })
