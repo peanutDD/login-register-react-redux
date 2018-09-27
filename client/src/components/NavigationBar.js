@@ -21,6 +21,7 @@ class NavigationBar extends Component {
   render() {
 
     const { isAuthorization } = this.props.auth
+    console.log(isAuthorization);
     const userLinks = (
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">

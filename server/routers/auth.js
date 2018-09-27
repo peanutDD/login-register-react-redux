@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
   const { identifier, password } = req.body
 
   signale.success(identifier, password)
-  signale.fatal('致命错误！')
+  signale.fatal('模拟错误！')
 
   User.query({
     where: { username: identifier },
